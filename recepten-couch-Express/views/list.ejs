@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Recepten</title>
+</head>
+<body>
+  <h1>All recepten</h1>
+ <br/><br/>
+  <ul>
+  <% recepten.forEach(function(recept) { %>
+    <li>
+      
+      <span><b>Naam : </b><%= recept.value.naam %></span><br />
+      <span><b>calorien : </b><%= recept.value.calorien %></span><br />
+      <span><b>ingredienten : </b><%= recept.value.ingredienten %></span><br />
+      <span><b>tijd : </b><%= recept.value.tijd %></span><br />
+      <span><form action='/recepten/delete' method='POST'>
+        <span><input type='hidden' name='naam' value='<%= recept.value.naam %>'></span>
+        <span><input type='hidden' name='id' value='<%= recept.value._id %>'></span>
+        <span><button type='submit'>Delete</button></span>
+      </form></span><br />
+    </li>
+  <% }) %>
+  </ul>
+<br/>
+
+<a href='/recepten/add'>Add Recept</a>&nbsp;&nbsp;<a href='/recepten/searchOne'>Search Recept</a>
+
+</body>
+</html>

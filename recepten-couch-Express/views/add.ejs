@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Recepten</title>
+</head>
+<body>
+<div>
+  <h2>Add a recept</h2>
+  <br/><br/>
+  <form action='/recepten/add' method='POST'>
+   <table>
+     <!--tr><td>ID : </td><td><input type='text' name='id'></td></tr-->
+     <tr><td>Naam : </td><td><input type='text' name='naam'></td></tr>
+     <tr><td>Calorien : </td><td><input type='text' name='ingredienten'></td></tr>
+     <tr><td>Ingredienten : </td><td><input type='text' name='calorien' size=100></td></tr>
+     <tr><td>Tijd : </td><td><input type='text' name='tijd'></td></tr>
+     <tr><td><button type='submit'>Add</button></td></tr>
+   </table>
+   <input type='hidden' name='type' value='recept'>
+  </form>
+</div>
+</body>
+</html>

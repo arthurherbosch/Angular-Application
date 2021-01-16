@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Recept</title>
+</head>
+<body>
+<div>
+  <h2>Edit a Recept</h2>
+  <br/><br/>
+  <form action='/recepten/edit' method='POST'>
+   <table>
+     <tr><td>Name : </td><td><input type='text' name='naam' value='<%= recept.naam %>'></td></tr>
+     <tr><td>calorien : </td><td><input type='text' name='calorien' value='<%= recept.naam %>'></td></tr>
+     <tr><td>ingredienten : </td><td><input type='text' name='ingredienten' size=200 value='<%= recept.ingredienten %>'></td></tr>
+     <tr><td>tijd : </td><td><input type='text' name='tijd' value='<%= recept.tijd %>'></td></tr>
+     <tr><td><button type='submit'>Update</button></td></tr>
+   </table>
+   <input type='hidden' name='type' value='recept'>
+   <input type='hidden' name='_id' value='<%= recept._id %>'>
+   <input type='hidden' name='_rev' value='<%= recept._rev %>'>
+  </form>
+</div>
+</body>
+</html>
